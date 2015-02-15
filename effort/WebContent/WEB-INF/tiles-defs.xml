@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>	
+	<!-- User Module Configuration -->	
+	<definition name="userLayout" path="/baseLayout.jsp">
+		<put name="title" value="Tiles Example" />
+		<put name="header" value="/userHeader.jsp" />
+		<put name="body" value="/body.jsp" />
+		<put name="footer" value="/footer.jsp" />
+	</definition>
+	
+	<definition name="userLayoutForOpen" path="/baseLayout.jsp">
+		<put name="title" value="Tiles Example" />
+		<put name="header" value="/headerOpenPos.jsp" />
+		<put name="body" value="/body.jsp" />
+		<put name="footer" value="/footer.jsp" />
+	</definition>
+	
+	<definition name="loginLayout" path="/loginLayout.jsp">
+		<put name="title" value="Tiles Example" />
+		<put name="body" value="/body.jsp" />
+		<put name="footer" value="/footer.jsp" />
+	</definition>
+	
+	<!-- Admin Module Configuration -->
+	
+	<definition name="adminLayout" path="/baseLayout.jsp">
+		<put name="title" value="Tiles Example" />
+		<put name="header" value="/adminHeader.jsp" />
+		<put name="body" value="/body.jsp" />
+		<put name="footer" value="/footer.jsp" />
+	</definition>
+
+	<!-- Report Tiles Mapping -->
+	
+	<definition name="displayReport" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Report Page" />
+		<put name="body" value="/UserReport.jsp" />
+	</definition>
+
+	<definition name="getAllocationList" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Report Management Page" />
+		<put name="body" value="/reportmanagement.jsp" />
+	</definition>
+	
+	<definition name="getUserDetails" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Report Management Page" />
+		<put name="body" value="/reportmanagement.jsp" />
+	</definition>
+	
+	<definition name="getAllocationListForResource" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- Resource Access Mgmt. Page" />
+		<put name="body" value="/accessInfoManagment.jsp" />
+	</definition>	
+	<definition name="getUserAccessDetails" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- Resource Access Mgmt. Page" />
+		<put name="body" value="/accessInfoManagment.jsp" />
+	</definition>
+	
+	<definition name="getUserReportDetails" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- User Report Page" />
+		<put name="body" value="/UserReport.jsp" />
+	</definition>
+
+	<definition name="getDetailedTimesheet" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- User Report Page" />
+		<put name="body" value="/UserReport.jsp" />
+	</definition>
+		
+	<definition name="faQuestion" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- FAQ Page" />
+		<put name="body" value="/fa_Question.jsp" />
+	</definition>
+	
+	<definition name="viewClientFeedbackPage" extends="userLayoutForOpen">
+		<put name="title" value="Calsoft Labs Timesheet- Client Feedback" />
+		<put name="body" value="/viewClientFeedbackPage.jsp" />
+	</definition>
+	<definition name="getOpenPosition" extends="userLayoutForOpen">
+		<put name="title" value="Apollo ODC-Open Position Page" />
+		<put name="body" value="/getOpenPositionList.jsp" />
+	</definition>
+	
+	<!--  Tiles Definations For WeeklyStatus  -->
+	<definition name="weeklyStatusPage" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- User Report Page" />
+		<put name="body" value="/weeklyStatus.jsp" />
+	</definition>
+	
+	<definition name="weeklyStatusForm" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet- User Report Page" />
+		<put name="body" value="/weeklyStatusForm.jsp" />
+	</definition>
+
+	<!-- User Tiles Definations For Add User -->
+
+	<definition name="success" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page  " />
+		<put name="body" value="/registration.jsp" />
+	</definition>
+	<definition name="adminfail" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page " />
+		<put name="body" value="/fail.jsp" />
+	</definition>
+	<definition name="userfail" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Page " />
+		<put name="body" value="/fail.jsp" />
+	</definition>
+
+	<definition name="userManageSuccess" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin User Management Page " />
+		<put name="body" value="/registration.jsp" />
+	</definition>
+	
+	<definition name="deleted" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page " />
+		<put name="body" value="/registration.jsp" />
+	</definition>
+
+	<definition name="editable" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page " />
+		<put name="body" value="/registration.jsp" />
+	</definition>
+
+	<definition name="updated" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page " />
+		<put name="body" value="/registration.jsp" />
+	</definition>
+
+	<definition name="successForAdmin" extends="adminLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Admin Page " />
+		<put name="body" value="/admin.jsp" />
+	</definition>
+
+	<definition name="successForEmp" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-Home Page " />
+		<put name="body" value="/home.jsp" />
+	</definition>
+
+	<!-- Tiles Defination For Task module -->
+
+	<definition name="saveSuccess" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-TimeEntry Page " />
+		<put name="body" value="/UserTimeEntry.jsp" />
+	</definition>
+
+	<definition name="editSuccess" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User TaskEntry Page " />
+		<put name="body" value="/editEntryTask.jsp" />
+	</definition>
+	<definition name="getDetailSuccess" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Detail Page" />
+		<put name="body" value="/UserTimeEntry.jsp" />
+	</definition>
+
+	<definition name="deleteSuccess" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Page" />
+		<put name="body" value="/UserTimeEntry.jsp" />
+	</definition>
+	<definition name="deleteSuccess1" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Page" />
+		<put name="body" value="/editEntryTask.jsp" />
+	</definition>
+	
+	<definition name="saveEditSuccess" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Page" />
+		<put name="body" value="/UserTimeEntry.jsp" />
+	</definition>
+	
+	<definition name="onClickTask" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-TimeEntry Page" />
+		<put name="body" value="/UserTimeEntry.jsp" />
+	</definition>
+	
+	<definition name="timeEntryFreezedPage" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-TimeEntry Page" />
+		<put name="body" value="/usertime_entry_freeze_page.jsp" />
+	</definition>
+
+	<!-- Tile Defination For Leave Module -->
+
+	<definition name="getLeaveDetails" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Leave Plan Page " />
+		<put name="body" value="/leavePlanEntryDetail.jsp" />
+	</definition>
+	
+	<definition name="getLeaveDashBoard" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Leave Plan Page" />
+		<put name="body" value="/leaveDashBoard.jsp" />
+	</definition>
+
+	<definition name="clearCheckedDateDashBoard" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Leave Plan Page" />
+		<put name="body" value="/leaveDashBoard.jsp" />
+	</definition>
+	
+	<definition name="getTeamLeaveDetail" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Leave Plan Page " />
+		<put name="body" value="/leavePlanEntry.jsp" />
+	</definition>
+	<definition name="gochange" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Profile " />
+		<put name="body" value="/profile.jsp" />
+	</definition>
+	<definition name="change" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Profile " />
+		<put name="body" value="/changeprofile.jsp" />
+	</definition>
+	<definition name="passwordchanged" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Profile " />
+		<put name="body" value="/profile.jsp" />
+	</definition>
+<definition name="changfail" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Profile " />
+		<put name="body" value="/profile.jsp" />
+	</definition>
+	<definition name="getUserAccessMapping" extends="userLayout">
+		<put name="title" value="Calsoft Labs Timesheet-User Profile " />
+		<put name="body" value="/profile.jsp" />
+	</definition>	
+	<!-- Performance Log Page -->
+	<definition name="getUserDetailsSuccess" extends="userLayout">
+		<put name="title" value="Performance Log Page " />
+		<put name="body" value="performanceLogPage.jsp" />
+	</definition>
+</tiles-definitions>

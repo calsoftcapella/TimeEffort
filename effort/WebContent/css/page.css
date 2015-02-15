@@ -1,0 +1,178 @@
+table.hovertable1 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin-left: 1mm;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+table.hovertable1 td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.hovertable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin-left: 1mm;
+	color: #000000;
+}
+
+table.hovertable th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.hovertable tr {
+	background-color: #FFFFFF;
+}
+
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+</style>
+<style type="text/css">
+p {
+	margin-left: 13cm;
+	margin-top: 2cm;
+}
+div.box {
+	border: solid 1px #a9c6c9;
+	background-color: #FFFFFF;
+	display: table;
+	padding: 0px;
+	width: 295px;
+	align: left;
+	margin-left: 0cm;
+	text-align: left;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+div.boxMess {
+	border: solid 3px #a9c6c9;
+	border-style: dotted;
+	background-color: #FFFFFF;
+	display: table;
+	padding: 0px;
+	width: 700px;
+	hight: 0px;
+	align: left;
+	margin-left: 2px;
+	margin-bottom: 0px;
+	text-align: left;
+	color: #000000;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+}
+textarea {
+    font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	font:normal;
+    border: none;
+    width: 100%;
+    -webkit-box-sizing: border-box; /* <=iOS4, <= Android  2.3 */
+       -moz-box-sizing: border-box; /* FF1+ */
+            box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
+    overflow: visible;
+    padding-left: 25px; 
+    cursor: default; 
+    padding-top: 5px;
+    height: 60px;
+    resize: none;
+}
+textarea:FOCUS {
+	cursor:auto;
+}
+table.job_desc {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin-left: 1mm;
+	color: #000000;
+    overflow-y: scroll;
+}
+
+table.job_desc th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.job_desc tr {
+	background-color: #FFFFFF;
+}
+
+table.job_desc td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	vertical-align: top;
+}
+
+table.job_desc tr:nth-child(odd) {
+	background-color: #eee;
+}
+
+table.job_desc tr:nth-child(even) {
+	background-color: #fff;
+}
+#element_to_pop_up { 
+    background-color:#fff;
+    color:#000;
+    display:none; 
+    padding-left: 20px;
+    padding-bottom; 20px;
+}
+#element_to_pop_up1 { 
+    background-color:#fff;
+    color:#000;
+    display:none; 
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom; 20px;
+    padding-top: 0px;
+    min-width:400px;
+    min-height: 180px;
+}
+.b-close{
+    cursor:pointer;
+    position:relative;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+}
+input[type=button] {
+	font-family: verdana, arial, sans-serif;
+	font-size: 13px;
+	font-weight:bolder;
+	color: blue;
+	border-color: black;
+	border-style: ridge;
+	border-width: thin;
+	text-decoration:underline;
+	cursor: pointer;
+	width: 40px;
+}

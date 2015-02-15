@@ -1,0 +1,153 @@
+table.hovertableP {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertableP th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 7mm;
+	vertical-align: bottom;
+	text-align: left;
+}
+table.hovertableP tr {
+	background-color: #ffffff;
+}
+table.hovertableP td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 7mm;
+}
+table.hovertable1 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	align: center;
+}
+table.hovertable1 tr {
+	align: center;
+}
+table.hovertable1 td {
+	align: center;
+}
+table.hovertable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 10mm;
+	width: 12mm;
+}
+table.hovertable tr {
+	background-color: #ffffff;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 10mm;
+	width: 12mm;
+}
+table.hovertable121 {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.hovertable121 th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 12mm;
+	width: 12mm;
+}
+table.hovertable121 tr {
+	background-color: #ffffff;
+}
+table.hovertable121 td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 21mm;
+	width: 12mm;
+}
+table.defaulterCss {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+}
+table.defaulterCss th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 10mm;
+	width: 12mm;
+}
+table.defaulterCss tr {
+	background-color: #ffffff;
+}
+table.defaulterCss td {
+	border-width: 1px;
+	padding-left: 5px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	height: 10mm;
+	width: 12mm;
+}
+input[type=button] {
+	cursor: pointer;
+}
+select {
+	cursor: pointer;
+}
+.changeButtonUI:hover {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 2px 9px #666666;
+	-moz-box-shadow: 0px 2px 9px #666666;
+	box-shadow: 0px 2px 9px #666666;
+	text-shadow: 0px 0px 5px #666666;
+	border: solid #121011 1px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6
+		), color-stop(1, #1e62d0) ); background : -moz-linear-gradient( center
+	top, #3d94f6 5%, #1e62d0 100%); filter : progid :
+	DXImageTransform.Microsoft.gradient ( startColorstr = '#3d94f6',
+	endColorstr = '#1e62d0');
+	height: 23px;
+	background: -moz-linear-gradient(center top, #3d94f6 5%, #1e62d0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6',
+		endColorstr='#1e62d0' );
+}

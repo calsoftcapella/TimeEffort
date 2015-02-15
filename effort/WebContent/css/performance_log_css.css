@@ -1,0 +1,203 @@
+table.hovertable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin-left: 1mm;
+	color: #000000;
+	width: 730px;
+}
+table.hovertable th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.hovertable tr {
+	background-color: #FFFFFF;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.performance_log_table {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	width: 340px;
+	padding-top: 20px;
+}
+table.hover_tab {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+	color: #000000;
+}
+
+table.hover_tab th {
+	background-color: #A5A1A0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	border-style: solid;
+}
+
+table.hover_tab tr {
+	background-color: #FFFFFF;
+	height: 0.6cm;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+
+table.hover_tab td {
+	height: 0.3cm;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.hover_tab tr:nth-child(odd) { background-color:#eee; }
+table.hover_tab tr:nth-child(even)   { background-color:#fff; }
+
+p {
+	margin-left: 13cm;
+	margin-top: 2cm;
+}
+
+div.box {
+	border: solid 1px #a9c6c9;
+	background-color: #FFFFFF;
+	display: table;
+	padding: 0px;
+	width: 295px;
+	align: left;
+	margin-left: 0cm;
+	text-align: left;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+
+div.boxMess {
+	border: solid 3px #a9c6c9;
+	border-style: dotted;
+	background-color: #FFFFFF;
+	display: table;
+	padding: 0px;
+	width: 700px;
+	height: 0px;
+	margin-left: 2px;
+	margin-bottom: 0px;
+	text-align: left;
+	color: #000000;
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+}
+select option,select {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	border-color: black;
+	border-style: solid;
+	border-width: thin;
+	width: 220px;
+}
+
+textarea {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+	border-color: black;
+	border-style: solid;
+	border-width: thin;
+	width: 200px;
+	text-align: left;
+}
+
+input[type=button] {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: blue;
+	background-image: url("");
+	border-color: black;
+	cursor: pointer;
+	
+}
+input[type=button]:hover {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 2px 9px #666666;
+	-moz-box-shadow: 0px 2px 9px #666666;
+	box-shadow: 0px 2px 9px #666666;
+	text-shadow: 0px 0px 5px #666666;
+	border: solid #121011 1px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6
+		), color-stop(1, #1e62d0) ); background : -moz-linear-gradient( center
+	top, #3d94f6 5%, #1e62d0 100%); filter : progid :
+	DXImageTransform.Microsoft.gradient ( startColorstr = '#3d94f6',
+	endColorstr = '#1e62d0');
+	height: 100%;
+	background: -moz-linear-gradient(center top, #3d94f6 5%, #1e62d0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6',
+		endColorstr='#1e62d0' );
+}
+input[type=checkbox] {
+	font-family: verdana, arial, sans-serif;
+	height: 0ex;
+}
+
+input[type=reset] {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: blue;
+	background-image: url("");
+	border-color: black;
+	cursor: pointer;
+}
+input[type=reset]:hover {
+	font-family: verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #ffffff;
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 2px 9px #666666;
+	-moz-box-shadow: 0px 2px 9px #666666;
+	box-shadow: 0px 2px 9px #666666;
+	text-shadow: 0px 0px 5px #666666;
+	border: solid #121011 1px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6
+		), color-stop(1, #1e62d0) ); background : -moz-linear-gradient( center
+	top, #3d94f6 5%, #1e62d0 100%); filter : progid :
+	DXImageTransform.Microsoft.gradient ( startColorstr = '#3d94f6',
+	endColorstr = '#1e62d0');
+	height: 100%;
+	background: -moz-linear-gradient(center top, #3d94f6 5%, #1e62d0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6',
+		endColorstr='#1e62d0' );
+}
+table.my_tab tr:nth-child(odd) {
+	background-color: #eee;
+	padding: 0px;
+}
+
+table.my_tab tr:nth-child(even) {
+	background-color: #fff;
+	padding: 0px;
+}
+table.my_tab tr:HOVER {
+	background-color: #C8C8FF;
+}

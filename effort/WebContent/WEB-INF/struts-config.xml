@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="userform" type="com.calsoft.user.form.UserForm"></form-bean>
+		<form-bean name="contactForm" type="com.calsoft.user.form.ContactForm"></form-bean>
+		<form-bean name="taskForm" type="com.calsoft.task.form.TaskForm"></form-bean>
+		<form-bean name="reportForm" type="com.calsoft.report.form.ReportForm"></form-bean>
+		<form-bean name="leaveForm" type="com.calsoft.leave.form.LeaveForm"></form-bean>
+		<form-bean name="weeklyForm" type="com.calsoft.report.form.WeeklyForm"></form-bean>
+		<form-bean name="performanceLogForm" type="com.calsoft.performance.form.PerformanceLogForm"></form-bean>
+		<form-bean name="clientFeedbackForm" type="com.calsoft.user.form.ClientFeedbackForm"></form-bean>
+	</form-beans>
+	<global-forwards>
+	</global-forwards>
+	<action-mappings>
+
+		<!-- Modified By Asis Kumar Mohanty For Report actions -->
+		<action path="/displayReport" input="/index.jsp" name="reportForm"
+			parameter="method" type="com.calsoft.report.action.ReportAction"
+			scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="displayReport" path="displayReport"></forward>
+			<forward name="getUserDetails" path="getUserDetails"></forward>
+			<forward name="getUserReportDetails" path="getUserReportDetails"></forward>
+			<forward name="getDetailedTimesheet" path="getDetailedTimesheet"></forward>
+		</action>
+		
+		
+		<action path="/faquestion" type="com.calsoft.report.action.ReportAction"
+			parameter="method" scope="request" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="faQuestion" path="faQuestion"/>
+		</action>	
+		
+		
+		<!-- Add for Weekly Status -->
+		<action path="/displayReport1"  name="weeklyForm"
+			parameter="method" type="com.calsoft.report.action.ReportAction" scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="weeklyStatusForm" path="weeklyStatusForm"></forward>
+			<forward name="weeklyStatusPage" path="weeklyStatusPage"></forward>
+		</action>
+								
+		<!-- Configure Action class for admin module -->
+		<action path="/reportmanagement" input="/index.jsp" name="reportForm"
+			parameter="method" type="com.calsoft.report.action.ReportAction"
+			scope="request">
+		    <exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="getAllocationList" path="getAllocationList"></forward>
+			<forward name="addResources" path="getAllocationList"></forward>
+			<forward name="deleteResources" path="getAllocationList"></forward>
+			<forward name="getUserAccessMapping" path="getAllocationList"></forward>
+			<forward name="getUserDetails" path="getUserDetails"></forward>
+			<forward name="getUserAccessDetails" path="getUserAccessDetails"></forward>
+			<forward name="getAllocationListForResource" path="getUserAccessDetails"></forward>
+			<forward name="getAllUserAccessMappingDetails" path="getUserAccessDetails"></forward>
+			<forward name="getUserAccessMappingDetailedList" path="getUserAccessDetails"></forward>
+			<forward name="addResourcesAccess" path="getUserAccessDetails"></forward>
+			<forward name="deleteResourcesAccess" path="getUserAccessDetails"></forward>
+		</action>
+	
+		 <!-- Added for Ajax calling  -->
+		<action path="/taskAction01"  name="taskForm" parameter="method" type="com.calsoft.task.action.TaskAction" scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+		</action>
+		
+		<action path="/taskActionAfterAjaxSave"  name="taskForm" parameter="method" type="com.calsoft.task.action.TaskAction" scope="request" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+		</action>
+		<!-- Added for Ajax calling  -->
+		
+		<action path="/taskAction1" type="com.calsoft.task.action.TaskAction"
+			parameter="method" validate="false" scope="request" input="saveSuccess"
+			name="taskForm">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="getDetailSuccess" path="getDetailSuccess"></forward>
+			<forward name="onClickTask" path="onClickTask"></forward>
+			<forward name="editSuccess" path="editSuccess"></forward>
+			<forward name="deleteSuccess" path="deleteSuccess"></forward>
+			<forward name="timeEntryFreezedPage" path="timeEntryFreezedPage"></forward>
+		</action>
+
+		<!-- Leave Action Configuration -->
+
+		<action path="/LeaveAction" input="/leavePlanEntry.jsp" name="leaveForm"
+			parameter="method" type="com.calsoft.leave.action.LeaveAction" scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="getLeaveDetails" path="getLeaveDetails"></forward>
+			<forward name="getLeaveDashBoard" path="getLeaveDashBoard"></forward>
+			<forward name="clearCheckedDateDashBoard" path="clearCheckedDateDashBoard"></forward>
+			<forward name="getTeamLeaveDetail" path="getTeamLeaveDetail"></forward>
+
+		</action>
+
+		<!-- User Action Configuration -->
+
+		<action path="/AddUserAction" name="userform" 
+			type="com.calsoft.user.action.UserAction" input="success" validate="true"
+			parameter="method">
+			<exception key="error.duplicate.user" type="com.calsoft.exeception.DuplicateUser"
+				path="success">
+			</exception>
+            <exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="success" path="success"></forward>
+			<forward name="fail" path="fail"></forward>
+			<forward name="successForAdmin" path="successForAdmin"></forward>
+		</action>
+		<action path="/AddUserAction100" name="userform" 
+			type="com.calsoft.user.action.UserAction" parameter="method"
+			validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="userManageSuccess" path="userManageSuccess"></forward>
+			<forward name="fail" path="fail"></forward>
+
+		</action>
+		<action path="/AddUserAction2" type="com.calsoft.user.action.UserAction"
+			parameter="method" name="userform" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<!-- <forward name="signout" path="signout"></forward> -->
+			<forward name="deleted" path="deleted"></forward>
+			<forward name="editable" path="editable"></forward>
+			<forward name="signout" path="/login.jsp"></forward>
+		</action>
+
+		<action path="/AddUserAction3" type="com.calsoft.user.action.UserAction"
+			parameter="method" name="userform" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="gochange" path="gochange"></forward>
+			<forward name="change" path="change"></forward>
+			<forward name="getUserAccessMapping" path="getUserAccessMapping"></forward>
+
+		</action>
+		<action path="/AddUserAction444" type="com.calsoft.user.action.UserAction"
+			parameter="method" name="userform" validate="true" input="change">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="passwordchanged" path="passwordchanged"></forward>
+			<forward name="changfail" path="changfail"></forward>
+		</action>
+		
+		<action path="/ajaxCallForResourcePassValidation" type="com.calsoft.user.action.UserAction" parameter="method" name="userform" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+		</action>
+		
+		<action path="/UserActionTask" type="com.calsoft.user.action.UserAction"
+			parameter="method" name="userform" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="signout" path="/login.jsp"></forward>
+		</action>
+
+		<action path="/userLoginAction" input="/login.jsp" name="userform"
+			parameter="method" type="com.calsoft.user.action.UserAction">
+			<exception key="error.server.problem.login" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="successForAdmin" path="successForAdmin"></forward>
+			<forward name="successForEmp" path="successForEmp"></forward>
+			<forward name="loginFail" path="/login.jsp"></forward>
+			<forward name="displayReport" path="displayReport"></forward>
+		</action>
+
+		<action path="/genNewPass" input="/genPassWord.jsp" name="userform"
+			parameter="method" type="com.calsoft.user.action.UserAction" scope="request"
+			validate="false">
+			<exception key="error.server.failed" type="java.lang.Exception"
+				path="/genPassWord.jsp" scope="request" />
+			<forward name="generatePassword" path="/genPassWord.jsp"></forward>
+		</action>
+
+		<action path="/userHomeAction" name="userform" validate="false"
+			parameter="method" type="com.calsoft.user.action.UserAction" scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="successForEmp" path="successForEmp" />
+		</action>
+		
+		<action path="/viewOpenPosition" 
+			parameter="method" type="com.calsoft.user.action.UserAction" scope="request">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="getOpenPosition" path="getOpenPosition" />
+		</action>
+			
+		<action path="/adminHomeAction" type="com.calsoft.user.action.UserAction" name="userform"
+			parameter="method" scope="request" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="successForAdmin" path="successForAdmin"/>
+		</action>	
+		
+		<!-- Clent Feedback Page  -->	
+		<action path="/clientFeedback" type="com.calsoft.user.action.UserAction" name="clientFeedbackForm"
+			parameter="method" scope="request" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception" path="/login.jsp" />
+			<forward name="viewClientFeedbackPage" path="viewClientFeedbackPage"/>
+		</action>	
+		
+		<!-- Performance log page -->
+		<action path="/performanceLog" name="performanceLogForm"  type="com.calsoft.performance.action.PerformanceAction"
+			parameter="method" scope="request" validate="true" input="getUserDetailsSuccess">
+			<exception key="error.server.problem" type="java.lang.Exception"
+				path="/login.jsp" />
+			<forward name="getUserDetailsSuccess" path="getUserDetailsSuccess"/>
+		</action>	
+		<action path="/commentLog" name="commentLogForm" input="appraisalPerformanceLogpage"
+			type="com.calsoft.performance.action.PerformanceAction" parameter="method"
+			scope="request" validate="false">
+			<exception key="error.server.problem" type="java.lang.Exception"
+				path="/login.jsp" />
+			<forward name="getUserDetailsSuccess" path="getUserDetailsSuccess"></forward>
+		</action>
+								
+	</action-mappings>
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+	<message-resources parameter="ApplicationResources" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+		<set-property property="moduleAware" value="true" />
+	</plug-in>
+	<plug-in className="com.calsoft.util.QuartzPlugin" />
+
+</struts-config>
+

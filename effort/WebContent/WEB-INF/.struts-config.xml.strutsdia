@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM NAME="page0" PATH="/index.jsp" SHAPE="240,34,0,0"
+  SUBTYPE="jsp" TITLE="index.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addUser1" NAME="action0" PATH="/addUser1"
+  SHAPE="32,17,0,0" TITLE="userform" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="fail" NAME="forward0" PATH="/fail.jsp"
+   TARGET="page1" TITLE="fail" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="com.calsoft.exeception.DuplicateUser"
+   NAME="exception0" PATH="/addUser.jsp" TARGET="page2"
+   TITLE="DuplicateUser" TYPE="exception" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="/index.jsp"
+   TARGET="page0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/fail.jsp" SHAPE="272,210,0,0"
+  SUBTYPE="jsp" TITLE="fail.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/addUser.jsp" SHAPE="272,322,0,0"
+  SUBTYPE="jsp" TITLE="addUser.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>
